@@ -70,6 +70,8 @@ dependencies {
     implementation(libs.bundles.koin)
     // lifecycle
     implementation(libs.bundles.lifecycle)
+    //navigation
+    implementation(libs.androidx.navigation.compose)
 
 
 }

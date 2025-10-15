@@ -22,6 +22,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
+import com.samueljuma.basenetworkapp.ui.navigation.AppNavigation
+import com.samueljuma.basenetworkapp.ui.screens.FirstScreen
 import com.samueljuma.basenetworkapp.ui.theme.BaseNetworkAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -32,33 +34,7 @@ class MainActivity : ComponentActivity() {
         WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = true
         setContent {
             BaseNetworkAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Column(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .padding(innerPadding),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.Center
-                    ) {
-                        Image(
-                            modifier = Modifier.size(150.dp),
-                            painter = painterResource(id = R.drawable.logo),
-                            contentDescription = null
-                        )
-                        Text(
-                            text = "Base Network App",
-                        )
-                        Button(
-                            onClick = { /*TODO*/ },
-                            modifier = Modifier.padding(top = 20.dp),
-                            shape = RoundedCornerShape(20)
-                        ) {
-                            Text(
-                                text = "Click Me"
-                            )
-                        }
-                    }
-                }
+                AppNavigation()
             }
         }
     }
