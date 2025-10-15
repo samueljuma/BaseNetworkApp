@@ -59,4 +59,7 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     // Splash Screen
     implementation(libs.androidx.core.splashscreen)
+
+    //Google Fonts
+    implementation(libs.androidx.compose.ui.text.google.fonts)
 }

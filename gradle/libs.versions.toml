@@ -8,7 +8,8 @@ espressoCore = "3.7.0"
 lifecycleRuntimeKtx = "2.9.4"
 activityCompose = "1.11.0"
 composeBom = "2025.10.00"
-coreSplashscreen = "1.0.0-beta02"
+coreSplashscreen = "1.0.1"
+googleFonts = "1.9.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -28,6 +29,9 @@ androidx-compose-material3 = { group = "androidx.compose.material3", name = "mat
 
 #Splash Screen
 androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
+
+#Google Fonts
+androidx-compose-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref = "googleFonts" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
