@@ -10,6 +10,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -19,6 +21,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.core.view.WindowCompat
 import com.samueljuma.basenetworkapp.ui.theme.BaseNetworkAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,6 +29,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         installSplashScreen()
         enableEdgeToEdge()
+        WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = true
         setContent {
             BaseNetworkAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
@@ -44,6 +48,15 @@ class MainActivity : ComponentActivity() {
                         Text(
                             text = "Base Network App",
                         )
+                        Button(
+                            onClick = { /*TODO*/ },
+                            modifier = Modifier.padding(top = 20.dp),
+                            shape = RoundedCornerShape(20)
+                        ) {
+                            Text(
+                                text = "Click Me"
+                            )
+                        }
                     }
                 }
             }
