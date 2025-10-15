@@ -6,10 +6,13 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.samueljuma.basenetworkapp.ui.screens.FirstScreen
 import com.samueljuma.basenetworkapp.ui.screens.SecondScreen
+import com.samueljuma.basenetworkapp.ui.screens.TodosViewModel
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun AppNavigation(){
     val navController = rememberNavController()
+    val viewModel: TodosViewModel = koinViewModel()
 
     NavHost(
         navController = navController,
@@ -19,6 +22,7 @@ fun AppNavigation(){
             FirstScreen(
                 onClickMe = {
                     navController.navigate(AppScreens.SecondScreen.route)
+                    viewModel.fetchTodos()
                 }
             )
         }

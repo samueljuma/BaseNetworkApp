@@ -19,7 +19,7 @@ import com.samueljuma.basenetworkapp.R
 
 @Composable
 fun FirstScreen(
-    onClickMe: () -> Unit
+    onClickMe: () -> Unit,
 ){
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
         Column(
