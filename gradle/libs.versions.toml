@@ -20,8 +20,10 @@ lifecycle = "2.9.4"
 koin = "4.1.1"
 navigationCompose = "2.9.5"
 roomCommonJvm = "2.8.4"
+appcompat = "1.7.1"
 
 [libraries]
+android-gradlePlugin = {group = "com.android.tools.build", name = "gradle-api", version.ref = "agp"}
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -72,6 +74,7 @@ androidx-room-runtime = { group = "androidx.room", name = "room-runtime", versio
 androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 androidx-room-common = { group = "androidx.room", name = "room-common", version.ref = "roomCommonJvm" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -79,6 +82,9 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-jvm = {id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin"}
+
 
 [bundles]
 lifecycle = ["lifecycle-viewmodel-compose", "compose-lifecycle"]
