@@ -1,6 +1,8 @@
 [versions]
 agp = "8.13.0"
 kotlin = "2.2.20"
+ksp = "2.2.20-2.0.4"
+room = "2.7.1"
 coreKtx = "1.17.0"
 junit = "4.13.2"
 junitVersion = "1.3.0"
@@ -17,6 +19,7 @@ ktor = "3.3.1"
 lifecycle = "2.9.4"
 koin = "4.1.1"
 navigationCompose = "2.9.5"
+roomCommonJvm = "2.8.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -64,15 +67,22 @@ koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", versi
 #navigation
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 
+#Room
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+androidx-room-common = { group = "androidx.room", name = "room-common", version.ref = "roomCommonJvm" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 [bundles]
 lifecycle = ["lifecycle-viewmodel-compose", "compose-lifecycle"]
 networking = [ "ktor-client-core", "ktor-client-android", "ktor-client-cio","ktor-client-auth", "ktor-client-content-negotiation",
     "ktor-client-logging", "ktor-serialization-kotlinx-json", "kotlinx-coroutines-android", "kotlinx-serialization-json"]
 koin = [ "koin-core", "koin-android","koin-androidx-compose"]
+room = ["androidx-room-runtime", "androidx-room-ktx"]
